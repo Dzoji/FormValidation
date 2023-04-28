@@ -1,39 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Validacija Forme</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Order forma</title>
 </head>
+
 <body>
+    <div class="form_container">
+        <form id="orderForm">
+            <h1>Order Forma</h1>
+            <div>
+                <label for="ime_prezime">Ime i prezime:</label>
+                <input id="ime_prezime" type="text" name="ime_prezime" placeholder="Marko Marković" required>
+            </div>
+            <div>
+                <label for="telefon">Telefon:</label>
+                <input id="telefon" type="text" name="telefon" placeholder="000 111 222" required>
+            </div>
+            <div>
+                <label for="adresa_stanovanja">Adresa stanovanja:</label>
+                <input id="adresa_stanovanja" type="text" name="adresa_stanovanja" placeholder="Jovana Dučića" required>
+            </div>
 
-	<form>
-		<h1>Registracija korisnika</h1>
-		<div>
-			<label for="ime_prezime">Ime i prezime:</label>
-			<input id="ime_prezime" type="text" name="ime_prezime" placeholder="Niko Nikolic">
-		</div>
-		<div>
-			<label for="korisnicko_ime">Korisničko ime:</label>
-			<input id="korisnicko_ime" type="text" name="korisnicko_ime" placeholder="niko.nikolic1">
-		</div>
-		<div>
-			<label for="email">Email adresa:</label>
-			<input id="email" type="text" name="email" placeholder="niko.nikolic@mail.com">
-		</div>
-		<div>
-			<label for="lozinka">Lozinka:</label>
-			<input id="lozinka" type="text" name="lozinka" placeholder="*******">
-		</div>
-		<div>
-			<label for="ponovi_lozinku">Ponovi lozinku:</label>
-			<input id="ponovi_lozinku" type="text" name="ponovi_lozinku" placeholder="*******">
-		</div>
-		<div>
-			<button>Registruj se</button>
-		</div>
-	</form>
+            <div class="broj_container">
+                <div class="kucni_broj">
+                    <label for="kucni_broj">Kućni broj:</label>
+                    <input id="kucni_broj" type="text" name="kucni_broj" placeholder="C 25" required>
+                </div>
+                <div class="postanski_broj">
+                    <label for="postanski_broj">Poštanski broj:</label>
+                    <input id="postanski_broj" type="number" name="postanski_broj" placeholder="78000" required>
+                </div>
+            </div>
+            <div>
+                <label for="mjesto">Mjesto:</label>
+                <input id="mjesto" type="text" name="mjesto" placeholder="Banjaluka" required>
+            </div>
+            <div>
+                <label for="email">Email adresa:</label>
+                <input id="email" type="email" name="email" placeholder="m.markovic@gmail.com" required>
+            </div>
+            <div>
+                <label for="posebne_napomene">Posebne napomene:</label>
+                <textarea rows="4" cols="70" id="posebne_napomene" name="posebne_napomene"
+                    placeholder="Polje za posebne napomene..."></textarea>
+            </div>
+            <div>
+                <button id="naruci">Naruči</button>
+            </div>
+        </form>
+    </div>
+    <div class="img_container">
+        <img src="img/mastercard.png" alt="">
+        <img src="img/maestro.png" alt="">
+        <img src="img/visa.png" alt="">
+    </div>
 
 
-	<script src="script.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
